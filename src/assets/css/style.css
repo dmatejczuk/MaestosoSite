@@ -382,6 +382,15 @@ nav li {
     gap: 0.8rem;
 }
 
+.validation-message {
+    text-align: right;
+}
+
+.footer-form form textarea {
+    resize: none;
+    overflow-y: auto;
+}
+
 .footer-form input,
 .footer-form textarea {
     padding: 0.8rem;

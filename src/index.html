@@ -168,20 +168,25 @@
                 <form>
                     <input type="text" placeholder="Imię i nazwisko" required>
                     <input type="email" placeholder="Adres e-mail" required>
-                    <textarea placeholder="Twoja wiadomość" rows="4" required></textarea>
+                    <textarea placeholder="Twoja wiadomość" rows="4" maxlength="255" required
+                        class="form-validation"></textarea>
                     <button type="submit" class="button button-cta">Wyślij wiadomość</button>
                 </form>
             </div>
 
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer-bottom" id="kontakt">
             &copy; 2026 Maestoso Pianoforte | All rights reserved
             <br>
             <span class="footer-note">Note: All content on this website is fictional and for demonstration purposes
                 only.</span>
         </div>
     </footer>
+    <script src="./assets/js/form-validation.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", validateForms);
+    </script>
 </body>
 
 </html>
