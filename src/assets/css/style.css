@@ -97,6 +97,19 @@ nav li {
     margin: 0 1em;
 }
 
+nav .button {
+    font-size: 1rem;
+}
+
+nav .button-cta {
+    background: none;
+    border: 1px solid darkgoldenrod;
+    color: black;
+}
+
+nav .button-cta:hover {
+    color: white;
+}
 .hero {
     height: calc(100vh - 80px);
     min-height: 500px;
@@ -478,6 +491,10 @@ nav li {
         list-style-position: inside;
         margin-top: 0.75em;
         padding: 0;
+    }
+
+    nav li a.button {
+        list-style: none;
     }
 
     nav li {
