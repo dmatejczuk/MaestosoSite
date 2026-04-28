@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maestoso | Salon fortepianów i pianin</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/scroll.css">
 </head>
 
 <body>
@@ -42,7 +43,7 @@
                 <div class="hero-inner text-white">
                     <h1><span class="text-gold">Maestoso</span> – salon fortepianów i pianin</h1>
                     <p>Prawdziwe brzmienia, prawdziwe instrumenty, prawdziwe emocje.</p>
-                    <a href="#o-nas" class="button button-cta">Wejdź w nasz świat</a>
+                    <a href="#o-nas" class="button button-cta" data-scroll-to="o-nas">Wejdź w nasz świat</a>
                 </div>
             </div>
             <img src="./assets/images/hero.jpg" alt="Elegancki fortepian w salonie Maestoso">
@@ -225,8 +226,13 @@
                 only.</span>
         </div>
     </footer>
+
+    <button class="scroll-top" data-scroll-top aria-label="Przewiń na górę">
+        <span class="scroll-top__icon"></span>
+    </button>
     <script src="./assets/js/form-validation.js"></script>
     <script src="./assets/js/gallery.js"></script>
+    <script src="./assets/js/scroll.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", validateForms);
     </script>
