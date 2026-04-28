@@ -141,9 +141,46 @@
             </div>
         </section>
         <section id="galeria" class="gallery">
-            <h2> Galeria zdjęć </h2>
-            
+            <h2>Galeria zdjęć</h2>
+
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="./assets/images/gallery-1.jpg" alt="Fortepian koncertowy" class="gallery-image">
+                    <figcaption>Fortepian koncertowy</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="./assets/images/gallery-2.jpg" alt="Detale klawiatury fortepianu" class="gallery-image">
+                    <figcaption>Klawiatura fortepianu - najlepsza jakość i mechanika</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="./assets/images/gallery-3.jpg" alt="Eleganckie wnętrze z pianinem" class="gallery-image">
+                    <figcaption>Eleganckie wnętrze</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="./assets/images/gallery-4.jpg" alt="Fortepian w świetle dziennym" class="gallery-image">
+                    <figcaption>Światło i forma</figcaption>
+                </figure>
+            </div>
         </section>
+
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Zamknij galerię">&times;</button>
+            <button class="lightbox-btn lightbox-prev" id="lightbox-prev"
+                aria-label="Poprzednie zdjęcie">&#10094;</button>
+
+            <div class="lightbox-content">
+                <div class="lightbox-inner">
+                    <img src="" alt="" id="lightbox-image">
+                    <p class="lightbox-caption" id="lightbox-caption"></p>
+                </div>
+            </div>
+
+            <button class="lightbox-btn lightbox-next" id="lightbox-next"
+                aria-label="Następne zdjęcie">&#10095;</button>
+        </div>
     </main>
     <footer class="footer">
         <div class="footer-wrapper">
@@ -189,6 +226,7 @@
         </div>
     </footer>
     <script src="./assets/js/form-validation.js"></script>
+    <script src="./assets/js/gallery.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", validateForms);
     </script>
