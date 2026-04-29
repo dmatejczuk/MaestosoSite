@@ -5,27 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maestoso | Salon fortepianów i pianin</title>
+    <meta name="description"
+        content="Maestoso Pianoforte to elegancki salon fortepianów i pianin oferujący starannie wyselekcjonowane instrumenty, profesjonalne doradztwo i indywidualne podejście.">
+
+    <link rel="preload" as="image" href="./assets/images/hero.webp" type="image/webp" fetchpriority="high">
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/scroll.css">
+
+    <script src="./assets/js/form-validation.js" defer></script>
+    <script src="./assets/js/gallery.js" defer></script>
+    <script src="./assets/js/scroll.js" defer></script>
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof validateForms === "function") {
+                validateForms();
+            }
+        });
+    </script>
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <a href="./index.html">
+            <a href="./index.html" aria-label="Maestoso Pianoforte - strona główna">
                 <span class="logo-main text-gold">Maestoso</span>
                 <span class="logo-sub">PIANOFORTE</span>
             </a>
         </div>
 
-        <input type="checkbox" id="menu-toggle">
+        <input type="checkbox" id="menu-toggle" aria-label="Otwórz lub zamknij menu">
 
-        <label for="menu-toggle" class="menu-arrow">
+        <label for="menu-toggle" class="menu-arrow" aria-hidden="true">
             <span></span>
         </label>
 
         <div class="nav">
-            <nav>
+            <nav aria-label="Główna nawigacja">
                 <ul>
                     <li><a href="#o-nas">O nas</a></li>
                     <li><a href="#historia">Nasza historia</a></li>
@@ -37,6 +53,7 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section class="hero">
             <div class="hero-overlay">
@@ -46,14 +63,16 @@
                     <a href="#o-nas" class="button button-cta" data-scroll-to="o-nas">Wejdź w nasz świat</a>
                 </div>
             </div>
-            <img src="./assets/images/hero.jpg" alt="Elegancki fortepian w salonie Maestoso">
+
+            <img src="./assets/images/hero.webp" width="1920" height="1080" fetchpriority="high" loading="eager"
+                decoding="async" alt="Elegancki fortepian w salonie Maestoso">
         </section>
 
         <section id="o-nas" class="about">
             <div class="about-wrapper">
-
                 <div class="about-text">
                     <h2>O nas</h2>
+
                     <article>
                         <h3>Pasja do doskonałości</h3>
                         <p>
@@ -86,9 +105,9 @@
                 </div>
 
                 <div class="about-image">
-                    <img src="./assets/images/about.jpg" alt="Fortepian w eleganckim wnętrzu">
+                    <img src="./assets/images/about.webp" width="900" height="1200" loading="lazy" decoding="async"
+                        alt="Fortepian w eleganckim wnętrzu">
                 </div>
-
             </div>
         </section>
 
@@ -96,7 +115,6 @@
             <h2>Nasza historia</h2>
 
             <div class="timeline">
-
                 <div class="timeline-item">
                     <div class="timeline-year">1998</div>
                     <div class="timeline-content">
@@ -138,39 +156,32 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </section>
+
         <section id="galeria" class="gallery">
             <h2>Galeria zdjęć</h2>
-
-            <div class="gallery-grid">
-                <figure class="gallery-item">
-                    <img src="./assets/images/gallery-1.jpg" alt="Fortepian koncertowy" class="gallery-image">
-                    <figcaption>Fortepian koncertowy</figcaption>
-                </figure>
-
-                <figure class="gallery-item">
-                    <img src="./assets/images/gallery-2.jpg" alt="Detale klawiatury fortepianu" class="gallery-image">
-                    <figcaption>Klawiatura fortepianu - najlepsza jakość i mechanika</figcaption>
-                </figure>
-
-                <figure class="gallery-item">
-                    <img src="./assets/images/gallery-3.jpg" alt="Eleganckie wnętrze z pianinem" class="gallery-image">
-                    <figcaption>Eleganckie wnętrze</figcaption>
-                </figure>
-
-                <figure class="gallery-item">
-                    <img src="./assets/images/gallery-4.jpg" alt="Fortepian w świetle dziennym" class="gallery-image">
-                    <figcaption>Światło i forma</figcaption>
-                </figure>
-            </div>
+            <div class="gallery-grid" id="gallery-grid"></div>
         </section>
 
-        <div class="lightbox" id="lightbox">
-            <button class="lightbox-close" id="lightbox-close" aria-label="Zamknij galerię">&times;</button>
-            <button class="lightbox-btn lightbox-prev" id="lightbox-prev"
-                aria-label="Poprzednie zdjęcie">&#10094;</button>
+        <section id="sklep" class="products">
+            <h2>Nasze produkty</h2>
+            <p>Oferta instrumentów zostanie wkrótce uzupełniona.</p>
+        </section>
+
+        <section id="instrumenty" class="catalog">
+            <h2>Katalog instrumentów</h2>
+            <p>Katalog fortepianów i pianin zostanie wkrótce uzupełniony.</p>
+        </section>
+
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Zamknij galerię">
+                &times;
+            </button>
+
+            <button class="lightbox-btn lightbox-prev" id="lightbox-prev" type="button" aria-label="Poprzednie zdjęcie">
+                &#10094;
+            </button>
 
             <div class="lightbox-content">
                 <div class="lightbox-inner">
@@ -179,19 +190,23 @@
                 </div>
             </div>
 
-            <button class="lightbox-btn lightbox-next" id="lightbox-next"
-                aria-label="Następne zdjęcie">&#10095;</button>
+            <button class="lightbox-btn lightbox-next" id="lightbox-next" type="button" aria-label="Następne zdjęcie">
+                &#10095;
+            </button>
         </div>
     </main>
+
     <footer class="footer">
         <div class="footer-wrapper">
-
             <div class="footer-contact">
                 <h3>Kontakt</h3>
 
                 <p><strong>Maestoso Pianoforte</strong></p>
 
-                <p>ul. Elegancji 12<br>00-001 Warszawa</p>
+                <address>
+                    ul. Elegancji 12<br>
+                    00-001 Warszawa
+                </address>
 
                 <p>
                     <a href="tel:+48123456789">+48 123 456 789</a><br>
@@ -208,6 +223,7 @@
 
             <div class="footer-form">
                 <h3>Napisz do nas</h3>
+
                 <form>
                     <input type="text" placeholder="Imię i nazwisko" required>
                     <input type="email" placeholder="Adres e-mail" required>
@@ -216,26 +232,20 @@
                     <button type="submit" class="button button-cta">Wyślij wiadomość</button>
                 </form>
             </div>
-
         </div>
 
         <div class="footer-bottom" id="kontakt">
             &copy; 2026 Maestoso Pianoforte | All rights reserved
             <br>
-            <span class="footer-note">Note: All content on this website is fictional and for demonstration purposes
-                only.</span>
+            <span class="footer-note">
+                Note: All content on this website is fictional and for demonstration purposes only.
+            </span>
         </div>
     </footer>
 
-    <button class="scroll-top" data-scroll-top aria-label="Przewiń na górę">
+    <button class="scroll-top" type="button" data-scroll-top aria-label="Przewiń na górę">
         <span class="scroll-top__icon"></span>
     </button>
-    <script src="./assets/js/form-validation.js"></script>
-    <script src="./assets/js/gallery.js"></script>
-    <script src="./assets/js/scroll.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", validateForms);
-    </script>
 </body>
 
 </html>

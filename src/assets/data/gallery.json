@@ -1,0 +1,30 @@
+[
+    {
+        "src": "./assets/images/gallery-1.webp",
+        "alt": "Fortepian koncertowy",
+        "caption": "Fortepian koncertowy",
+        "width": 800,
+        "height": 600
+    },
+    {
+        "src": "./assets/images/gallery-2.webp",
+        "alt": "Detale klawiatury fortepianu",
+        "caption": "Klawiatura fortepianu - najlepsza jakość i mechanika",
+        "width": 800,
+        "height": 600
+    },
+    {
+        "src": "./assets/images/gallery-3.webp",
+        "alt": "Eleganckie wnętrze z pianinem",
+        "caption": "Eleganckie wnętrze",
+        "width": 800,
+        "height": 600
+    },
+    {
+        "src": "./assets/images/gallery-4.webp",
+        "alt": "Fortepian w świetle dziennym",
+        "caption": "Światło i forma",
+        "width": 800,
+        "height": 600
+    }
+]
